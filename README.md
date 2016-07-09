@@ -6,11 +6,13 @@ SWM v1.3 was written as part of a machine learning study on wildfire suppression
 For formal documentation of the model, see the SWMv1_3.pdf
 
 ## Usage
-Function Signature:
+
+### FUNCTION SIGNATURE:
 
 simulate(timesteps, policy=[0,0], random_seed=0, model_parameters={}, SILENT=False, PROBABILISTIC_CHOICES=True):
 
-PARAMETERS
+### PARAMETERS:
+
 
 timesteps: integer; how many timesteps to move the decision process forward.
      Generally using values between 50 and 500 is suitable for this model, but dynamics change
@@ -49,7 +51,7 @@ result1 = SWM.simulate(timesteps=50)
 #simulate 100 years with a "bad" policy
 result2 = SWM.simulate(timesteps=100, policy=[5, -10])
 
-#simulate 100 years with a "good" policly
+#simulate 100 years with a "good" policy
 result2 = SWM.simulate(timesteps=200, policy=[-15,20])
 
 ```
