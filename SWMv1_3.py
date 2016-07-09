@@ -3,6 +3,37 @@
 import random, math, numpy, MDP
 
 def simulate(timesteps, policy=[0,0], random_seed=0, model_parameters={}, SILENT=False, PROBABILISTIC_CHOICES=True):
+    """SWM v1.3 simulation function
+
+    PARAMETERS
+    ----------
+    timesteps: integer; how many timesteps to move the decision process forward.
+         Generally using values between 50 and 500 is suitable for this model, but dynamics change
+         accross that range.
+
+    policy: list of two floats or integers representing the logistic policy weights on SWM's two
+         decision variables.  See the formal documentation for a description of the decision-making
+         process and mathematics.
+
+    random_seed: Any hashable value.  Starts this simulation's random number seed, to allow replicability.
+         Currently, this defaults to 0, so you will ALWAYS simulate the same sequence of fires unless you
+         vary it yourself. To set to complete random (non-replicable) use "random_seed=None"
+
+    model_paramters: Various parameters controlling the dynamics of the MDP model. See source code for options
+         (I'll document it eventually...) and the formal model documentation for what each variable controls.
+
+    SILENT: boolean; Should the model suppress it's results to standard out. Default=False
+
+    PROBABILISTIC_CHOICES: boolean; Setting to false will disable a crucial component of the random decision
+         making process and has a huge effect on the model dynamics. However, the decision process becomes
+         deterministic given a particular series of fires and weather, which can be helpful, depending on 
+         your use of the model.
+
+
+    RETURNS
+    -------
+    A dictionary containing all information about the simulation. 
+    """    
     
     random.seed(random_seed)
     
