@@ -46,7 +46,8 @@ Current options are key:value pairs. Values are numeric for all options.
 * "Starting Timber Value": The starting timber value, which is also the initial state reward before modifications by fire suppression, fire behavior, etc...  
 * "Starting Habitat Value": The starting value for habitat. (See formal documentation for this additional metric.)  
      
-    
+
+### EXAMPLE:    
 
 ```python
 #import SWM
