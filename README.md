@@ -31,40 +31,22 @@ random_seed: Any hashable value.  Starts this simulation's random number seed, t
 SILENT: boolean; Should the model suppress it's results to standard out. Default=False
 
 model_paramters: Various parameters controlling the dynamics of the MDP model.
-
-        Current options are key:value pairs. Values are numeric for all options.
-        
-            "Suppression Cost - Mild Event": Cost in this timestep for suppressing a mild fire event.
-            
-            "Suppression Cost - Severe Event": Cost in this timestep for suppressing a severe fire event.
-            
-            "Severe Burn Cost": Cost in this timestep for a severe fire burning.
-            
-            "Vulnerability Change After Suppression": (typically positive) change in the probability of severe fire after suppression
-                 
-            "Vulnerability Change After Mild": (typically negative) change in the probability of severe fire after a mild fire event
-                 
-            "Vulnerability Change After Severe": (typically negative) change in the probability of severe fire after a severe fire event
-                 
-            "Timber Value Change After Suppression": change in timber value (which produces the reward in each timestep) after a fire suppression (typically positive)
-                 
-            "Timber Value Change After Mild": change in timber value (which produces the reward in each timestep) after a mild fire (typically positive)
-                 
-            "Timber Value Change After Severe": change in timber value (which produces the reward in each timestep) after a severe fire (typically negative)
-                 
-            "Probabilistic Choices" - BOOLEAN: Setting to false will disable a crucial component of the random decision making process and has a huge effect on the model dynamics. However, the decision process becomes deterministic given a particular series of fires and weather, which can be helpful, depending on your use of the model.
-                 
-            "Starting Vulnerability": The probability (0 to 1) that the initial forest will have a severe fire on the next fire event.
-                 
-            "Starting Timber Value": The starting timber value, which is also the initial state reward before modifications by fire suppression, fire behavior, etc...
-                 
-            "Starting Habitat Value": The starting value for habitat. (See formal documentation for this additional metric.)
+     Current options are key:value pairs. Values are numeric for all options.
+     "Suppression Cost - Mild Event": Cost in this timestep for suppressing a mild fire event.
+     "Suppression Cost - Severe Event": Cost in this timestep for suppressing a severe fire event.
+     "Severe Burn Cost": Cost in this timestep for a severe fire burning.
+     "Vulnerability Change After Suppression": (typically positive) change in the probability of severe fire after suppression
+     "Vulnerability Change After Mild": (typically negative) change in the probability of severe fire after a mild fire event
+     "Vulnerability Change After Severe": (typically negative) change in the probability of severe fire after a severe fire event
+     "Timber Value Change After Suppression": change in timber value (which produces the reward in each timestep) after a fire suppression (typically positive)
+     "Timber Value Change After Mild": change in timber value (which produces the reward in each timestep) after a mild fire (typically positive)
+     "Timber Value Change After Severe": change in timber value (which produces the reward in each timestep) after a severe fire (typically negative)
+     "Probabilistic Choices" - BOOLEAN: Setting to false will disable a crucial component of the random decision making process and has a huge effect on the model dynamics. However, the decision process becomes deterministic given a particular series of fires and weather, which can be helpful, depending on your use of the model.
+     "Starting Vulnerability": The probability (0 to 1) that the initial forest will have a severe fire on the next fire event.
+     "Starting Timber Value": The starting timber value, which is also the initial state reward before modifications by fire suppression, fire behavior, etc...
+     "Starting Habitat Value": The starting value for habitat. (See formal documentation for this additional metric.)
      
     
-
-
-
-
 
 ```python
 #import SWM
